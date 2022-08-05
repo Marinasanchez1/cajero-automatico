@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Personas</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Empresas</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success " type="submit">Search</button>
+            </form>
+        </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container" id="inicio">
+        <div class="row">
+            <div class="col">
+            <div class="inicio">
+                <form>
+                    <div class="mb-3">
+                        <h3 class="af">Cajero Automatico</h3>
+                        <label for="usuario" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" name="usuario" id="usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contrasenia" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="contrasenia" id="contrasenia">
+                    </div>
+                </form>
+                <button onclick="ingresar()" type="submit" class="btn btn-primary btnc">Ingresar</button>
+            </div>
+            </div>
+            <div class="col">
+            <img src="img/images3.webp" class="imag" alt="...">
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="acciones" id="acciones">
+        <div class="container" id="inicio">
+            <div class="row">
+                <h2>Bienvenido <span id="nombre-usuario"></span></h2>
+                <h4>Selecciona la operacion que deseas realizar</h4>
+            </div>
+            <div class="row">
+                <div class="col aver">
+                    <table class="table" id="funciones">
+                        <thead>
+                        <tr>
+                            <td colspan="4" ><img src="img/bbva-p.webp"  alt=""></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td scope="row"><button id="consultar" class="btn btn-success">Consultar saldo</button></td>
+                            <td><button  id="retira"class="btn btn-success">Hacer un retiro</button></td>
+                            <td><button  id ="deposita" class="btn btn-success">Hacer un depósito</button></td>
+                            <td><button  id ="PagarServicio" class="btn btn-success">Pagar un Servicio</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="saldo" id="saldo">
+        <div class="container" id="inicio">
+            <div class="row">
+                <h2>Bienvenido <span id="nombre-usuario"></span></h2>
+                <h4>Consultar Saldo</h4>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="funciones">
+                        <thead>
+                        <tr>
+                            <td colspan="4" ><img src="img/bbva-p.webp"  alt=""></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td scope="row"><button id="menu" class="btn btn-success">Menu</button></td>
+                            <td>
+                                <h3 class="info" id="info"></h3>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="retiro" id="retiro">
+        <div class="container" id="inicio">
+            <div class="row">
+                <h2>Bienvenido <span id="nombre-usuario"></span></h2>
+                <h4>Retirar Saldo</h4>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="funciones">
+                        <thead>
+                        <tr>
+                            <td colspan="4" ><img src="img/bbva-p.webp"  alt=""></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td scope="row"><button id="menu2" class="btn btn-success">Menu</button></td>
+                            <td id="f2">
+                                    <form name="f1" class="acom">
+                                        <h4 class="info" id="informa">Operacion realizada con exito</h4>
+                                        <h3 class="info" id="infor"></h3>
+                                        <div class="input-group mb-3">
+                                    <input type="text" id="cantidad" class="form-control pad" placeholder="Ingrese la cantidad">
+                                </div>
+                                <div class="input-group mb-3 linea">
+                                    <td><button id="retirada" class="btn btn-success" type="button">Retirar</button></td>
+                                </div>
+                                    </form>
+                                </td>                       
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="deposito" id="deposito">
+        <div class="container" id="inicio">
+            <div class="row">
+                <h2>Bienvenido <span id="nombre-usuario"></span></h2>
+                <h4>Abonar Saldo</h4>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table" id="funciones">
+                        <thead>
+                        <tr>
+                            <td colspan="4" ><img src="img/bbva-p.webp"  alt=""></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td scope="row"><button id="menu3" class="btn btn-success">Menu</button></td>
+                            <td>
+                                    <form name="f2" class="acom">
+                                        <h4 class="info" id="informaci">Operacion realizada con exito</h4>
+                                        <h3 class="info" id="informac"></h3>
+                                        <div class="input-group mb-3 linea">
+                                    <input type="text" id="cantidadD" class="form-control pad" placeholder="Ingrese la cantidad">
+                                </div>
+                                <div class="input-group mb-3 linea">
+                                    <td> <button id="depositada" class="btn btn-success" type="button">Depositar</button></td>
+                                </div>
+                                    </form>
+                            </td>                       
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="acciones" id="servicios">
+        <div class="container" id="inicio">
+            <div class="row">
+                <h2>Bienvenido<span id="nombre-usuario"></span></h2>
+                <h4>Selecciona el servicio que deseas pagar</h4>
+            </div>
+            <div class="row">
+                <div class="col aver">
+                    <table class="table" id="servicio">
+                        <tbody>
+                        <tr>
+                            <td ><img src="img/luz.png" id="acomoda" class="img-thumbnail acomodo img-fluid" alt=""></td>
+                            <td ><img src="img/telefono.png" id="acomodad" class="img-thumbnail acomodo img-fluid" alt=""></td>
+                            <td ><img src="img/izzi.webp" id="acomodat" class="img-thumbnail acomodo img-fluid" alt=""></td>
+                        </tr>
+                        <tr>
+                        <td><button id="luz" class="btn btn-success servi">Servicio de Luz</button></td>
+                        <td><button id="agua" class="btn btn-success servi">Servicio de Telefono</button></td>
+                        <td><button id="internet" class="btn btn-success servi">Servicio de Internet</button></td>
+                        <td><button id="menu4" class="btn btn-success">Menu</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="aparece">
+                            <form name="pagar">
+                                <h3 class="paga">Pagar Servicio</h3>
+                                <h5 class="paga">Deposite el monto</h5>
+                                <div class="input-group mb-3">
+                                <input type="text" name="dinero" id="dinero" class="form-control pad" placeholder="$">
+                            </div>
+                            <div class="input-group mb-3 linea">
+                                <td><button class="btn btn-success espacio" id="ultimo" type="button">pagar</button></td>
+                            </div>
+                            </form>
+                        </td>
+                        <td>
+                            <h3 colspan="2" class="info" id="infopago"></h3>
+                        </td>
+                        </tr>
+            
+                            
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
